@@ -37,8 +37,11 @@ int main(int argc, char *argv[])
 
       /*OUVRE UN DES FICHIER*/
       int PBM = alea;
+      int nomFichier;
+      
+      FILE* nomFichier = NULL;
 
-      fopen(getenv("EXIASAVER_PBM")); //ouvrir le fichier VE
+      nonFichier = fopen(getenv("EXIASAVER_PBM")); //ouvrir le fichier VE
 
       switch(PBM)     //ouvrir une image PBM selon alea
       {
@@ -153,6 +156,7 @@ if (historique != NULL)		//Si le fichier existe on fait :
             } while ((lettre) != EOF); // EOF: caractère de fin du fichier
 
           fclose(fichier); // On ferme le fichier qui a été ouvert
+          fclose(nomFichier); //On ferme le fichier VE
     }
 
     else

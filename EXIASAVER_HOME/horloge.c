@@ -38,7 +38,9 @@ int Horloge()
 
 	FILE* fichier = NULL; //initialisation du pointeur a NULL
 
-	fopen(getenv("EXIASAVER2_PBM")) //ouvrir le fichier VE
+	FILE* nomFichier = NULL;
+
+	nonFichier = fopen(getenv("EXIASAVER2_PBM")); //ouvrir le fichier VE
 
 	for (PBM=0; PBM<8; PBM++)			//ouvrir tout les chiffres PBM
 	{
@@ -130,6 +132,7 @@ int Horloge()
 
 					 }
 			fclose(fichier); // fermeture du fichier
+			fclose(nomFichier); //fermer fichier VE
     	}
 		x=x-6;
 		y=y+7;
