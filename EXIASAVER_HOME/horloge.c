@@ -38,9 +38,8 @@ int Horloge()
 
 	FILE* fichier = NULL; //initialisation du pointeur a NULL
 
-	FILE* nomFichier = NULL;
-
-	nonFichier = fopen(getenv("EXIASAVER2_PBM")); //ouvrir le fichier VE
+	FILE * lienVE = NULL;
+	lienVE = chdir(getenv("EXIASAVER2_PBM")); //ouvrir le fichier VE
 
 	for (PBM=0; PBM<8; PBM++)			//ouvrir tout les chiffres PBM
 	{
@@ -51,7 +50,6 @@ int Horloge()
 				break;
 
 			case 1:
-
 				fichier = fopen("1.pbm", "r");
 				break;
 
@@ -132,7 +130,7 @@ int Horloge()
 
 					 }
 			fclose(fichier); // fermeture du fichier
-			fclose(nomFichier); //fermer fichier VE
+			//fclose(lienVE); //fermer fichier VE
     	}
 		x=x-6;
 		y=y+7;
@@ -144,7 +142,7 @@ int Horloge()
 int main()
 {
 
-	int RefreshT = getenv("EXIASAVER2_SLEEP");				//variable de tps de refresh en secondes
+	int RefreshT = 10;				//variable de tps de refresh en secondes
 	int infini = 0;
 	int i;
 	int x1 = 20,y1 = 15, x2 = 3, y2 = 25;		//coordonnees pour gotoxy
