@@ -142,7 +142,7 @@ int Horloge()
 int main()
 {
 
-	int RefreshT = 10;				//variable de tps de refresh en secondes
+	int RefreshT = atoi(getenv("EXIASAVER_SLEEP"));		//variable de tps de refresh en secondes depuis la VE
 	int infini = 0;
 	int i;
 	int x1 = 20,y1 = 15, x2 = 3, y2 = 25;		//coordonnees pour gotoxy
